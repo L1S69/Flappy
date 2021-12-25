@@ -14,6 +14,8 @@ public class AdsController : MonoBehaviour
         if (Advertisement.isSupported)
         {
             Advertisement.Initialize(gameID, testMode);
+            StartCoroutine(ShowBannerWhenReady());
+            Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
         }
 
         gameOverCount = PlayerPrefs.GetInt("GameOverCount");
@@ -47,5 +49,14 @@ public class AdsController : MonoBehaviour
         {
             ShowAd();
         }
+    }
+
+    IEnumerator ShowBannerWhenReady()
+    {
+        while (!Advertisement.isInitialized)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+        Advertisement.Banner.Show("Banner_Android");
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class StoreAds : MonoBehaviour, IUnityAdsShowListener
+public class StoreAds : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsLoadListener, IUnityAdsShowListener
 {
     [SerializeField] private string gameID;
     [SerializeField] private bool testMode;
@@ -13,7 +13,7 @@ public class StoreAds : MonoBehaviour, IUnityAdsShowListener
     {
         if (Advertisement.isSupported)
         {
-            Advertisement.Initialize(gameID, testMode);
+            Advertisement.Initialize(gameID, testMode, this);
             StartCoroutine(ShowBannerWhenReady());
             Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
         }
@@ -63,9 +63,30 @@ public class StoreAds : MonoBehaviour, IUnityAdsShowListener
 
     public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
     {
-        if (placementId.Equals("Rewarded_Android") && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+        if (showCompletionState == UnityAdsShowCompletionState.COMPLETED)
         {
             money.AddMoney();
+            print("Reward");
         }
+    }
+
+    public void OnUnityAdsAdLoaded(string placementId)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnInitializationComplete()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnInitializationFailed(UnityAdsInitializationError error, string message)
+    {
+        throw new System.NotImplementedException();
     }
 }
