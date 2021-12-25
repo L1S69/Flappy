@@ -15,6 +15,8 @@ public class AdsController : MonoBehaviour
         {
             Advertisement.Initialize(gameID, testMode);
         }
+
+        gameOverCount = PlayerPrefs.GetInt("GameOverCount");
     }
 
     private void OnEnable()
@@ -29,9 +31,9 @@ public class AdsController : MonoBehaviour
 
     private void ShowAd()
     {
-        if (Advertisement.IsReady())
+        if (Advertisement.isInitialized)
         {
-            Advertisement.Show("video");
+            Advertisement.Show("Interstitial_Android");
         }
         gameOverCount = 0;
         PlayerPrefs.SetInt("GameOverCount", gameOverCount);

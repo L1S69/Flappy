@@ -6,20 +6,12 @@ public class Money : MonoBehaviour
 {
     private int money;
 
+    [SerializeField] private int reward;
+
     private void Start()
     {
         money = PlayerPrefs.GetInt("Money");
         GameEvents.MoneyAmountChangeAction(money);
-    }
-
-    private void OnEnable()
-    {
-        GameEvents.AddMoneyButtonClickAction += AddMoney;
-    }
-
-    private void OnDisable()
-    {
-        GameEvents.AddMoneyButtonClickAction -= AddMoney;
     }
 
     public bool SpendMoney(int amount)
@@ -34,9 +26,9 @@ public class Money : MonoBehaviour
         else return false;
     }
 
-    private void AddMoney() 
+    public void AddMoney() 
     {
-        money += 100;
+        money += reward;
         PlayerPrefs.SetInt("Money", money);
         GameEvents.MoneyAmountChangeAction(money);
     }

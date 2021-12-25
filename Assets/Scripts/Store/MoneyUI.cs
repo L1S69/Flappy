@@ -18,6 +18,6 @@ public class MoneyUI : MonoBehaviour
 
     private void ShowMoneyAmount(int amount) 
     {
-        moneyText.text = $"M:{amount}";
+        moneyText.text = $"{amount}";
     }
 }

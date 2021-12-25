@@ -16,8 +16,8 @@ public class PlayerScore : MonoBehaviour
     {
         highscore = PlayerPrefs.GetInt("Highscore");
         money = PlayerPrefs.GetInt("Money");
-        highscoreText.text = $"HI:{highscore}";
-        moneyText.text = $"M:{money}";
+        highscoreText.text = $"{highscore}";
+        moneyText.text = $"{money}";
     }
 
     private void OnEnable()
@@ -37,7 +37,7 @@ public class PlayerScore : MonoBehaviour
         score++;
         money++;
         scoreText.text = score.ToString();
-        moneyText.text = $"M:{money}";
+        moneyText.text = $"{money}";
     }
 
     private void OnGameOver()

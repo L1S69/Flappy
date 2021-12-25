@@ -73,4 +73,10 @@ public static class GameEvents
     {
         AddMoneyButtonClickAction?.Invoke();
     }
+	
+	public static Action ChangeLanguageButtonClickAction;
+    public static void ChangeLanguageButtonClick()
+    {
+        ChangeLanguageButtonClickAction?.Invoke();
+    }
 }
