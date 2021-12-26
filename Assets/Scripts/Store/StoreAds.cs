@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
-public class StoreAds : MonoBehaviour, IUnityAdsInitializationListener, IUnityAdsLoadListener, IUnityAdsShowListener
+public class StoreAds : MonoBehaviour, IUnityAdsListener
 {
     [SerializeField] private string gameID;
     [SerializeField] private bool testMode;
@@ -13,7 +13,8 @@ public class StoreAds : MonoBehaviour, IUnityAdsInitializationListener, IUnityAd
     {
         if (Advertisement.isSupported)
         {
-            Advertisement.Initialize(gameID, testMode, this);
+            Advertisement.AddListener(this);
+            Advertisement.Initialize(gameID, testMode);
             StartCoroutine(ShowBannerWhenReady());
             Advertisement.Banner.SetPosition(BannerPosition.BOTTOM_CENTER);
         }
@@ -46,47 +47,27 @@ public class StoreAds : MonoBehaviour, IUnityAdsInitializationListener, IUnityAd
         Advertisement.Banner.Show("Banner_Android");
     }
 
-    public void OnUnityAdsShowFailure(string placementId, UnityAdsShowError error, string message)
+    public void OnUnityAdsReady(string placementId)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
-    public void OnUnityAdsShowStart(string placementId)
+    public void OnUnityAdsDidError(string message)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
-    public void OnUnityAdsShowClick(string placementId)
+    public void OnUnityAdsDidStart(string placementId)
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
-    public void OnUnityAdsShowComplete(string placementId, UnityAdsShowCompletionState showCompletionState)
+    public void OnUnityAdsDidFinish(string placementId, ShowResult showResult)
     {
-        if (showCompletionState == UnityAdsShowCompletionState.COMPLETED)
+        if (showResult == ShowResult.Finished)
         {
             money.AddMoney();
             print("Reward");
-        }
-    }
-
-    public void OnUnityAdsAdLoaded(string placementId)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnUnityAdsFailedToLoad(string placementId, UnityAdsLoadError error, string message)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnInitializationComplete()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnInitializationFailed(UnityAdsInitializationError error, string message)
-    {
-        throw new System.NotImplementedException();
+        }    
     }
 }
