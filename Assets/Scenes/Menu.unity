@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameID: 4523549
-  testMode: 1
+  testMode: 0
 --- !u!4 &207299184
 Transform:
   m_ObjectHideFlags: 0
