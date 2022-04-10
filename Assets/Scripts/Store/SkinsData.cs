@@ -7,6 +7,4 @@ public class SkinsData : ScriptableObject
 {
 	public Sprite[] Skins;
 	public int[] Prices;
-	public AudioClip[] DeathSounds;
-	public Sprite[] TubeSkins;
 }

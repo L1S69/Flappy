@@ -13,45 +13,17 @@ MonoBehaviour:
   m_Name: SkinsData
   m_EditorClassIdentifier: 
   Skins:
-  - {fileID: 21300000, guid: 06a4169cb8eca1341a17d45dac4810e4, type: 3}
-  - {fileID: 21300000, guid: 0bc6fdf2926e4384c8581d885106bbd7, type: 3}
-  - {fileID: 21300000, guid: 531e8474731a7774ea589c5ff39c0c97, type: 3}
-  - {fileID: 21300000, guid: de43eb7df7fba7948ba9bcae681dcc61, type: 3}
-  - {fileID: 21300000, guid: c9fbc8bf55c59344ca10b5d7ac7a17d2, type: 3}
-  - {fileID: 21300000, guid: b93aa4e7790d5a94583418ffc96a3340, type: 3}
-  - {fileID: 21300000, guid: 368d3b01cf65c92428497d96f3d7d723, type: 3}
-  - {fileID: 21300000, guid: 659cc749124fdb2429e38c21655215c4, type: 3}
-  - {fileID: 21300000, guid: 2f40161cea19c9f4aa583f4981eaa01c, type: 3}
-  - {fileID: 21300000, guid: 2a3ec5b8d2cf27b47b1c4921045bddc6, type: 3}
-  - {fileID: 21300000, guid: a74657664cc3c324a8b55b65e8b9da6d, type: 3}
-  - {fileID: 21300000, guid: e9158b80c1fa23e488f79bbc246c0f85, type: 3}
-  - {fileID: 21300000, guid: 74164ea32270fe9408e5713efa3defe3, type: 3}
-  Prices: 00000000c8000000c8000000c8000000c8000000c8000000c8000000e8030000c8000000c8000000c8000000c8000000c8000000
-  DeathSounds:
-  - {fileID: 8300000, guid: 6c9833ebefce1a34dad6e7ee0bf4dec5, type: 3}
-  - {fileID: 8300000, guid: 0cd978c0082cb5a45ad2af6bec391215, type: 3}
-  - {fileID: 8300000, guid: 6c9833ebefce1a34dad6e7ee0bf4dec5, type: 3}
-  - {fileID: 8300000, guid: 35b2cba10c344d24982402900e4daa43, type: 3}
-  - {fileID: 8300000, guid: e9546c4bec7e7974fb2f44a54fd3aff4, type: 3}
-  - {fileID: 8300000, guid: 649dda8065761db42905e1306edda84f, type: 3}
-  - {fileID: 8300000, guid: bdf942bcc2d7d15409990ee30b4fe62f, type: 3}
-  - {fileID: 8300000, guid: 226ef5b4531d5af41b699e62b35a9269, type: 3}
-  - {fileID: 8300000, guid: 0801a13207c3a2c4399bf6f8dd1d056b, type: 3}
-  - {fileID: 8300000, guid: 11e7a935cd092fd409a42dbc10864d72, type: 3}
-  - {fileID: 8300000, guid: 9d3f8b31d9c499445818d1d0d5f5f4d3, type: 3}
-  - {fileID: 8300000, guid: 53c336e63237eb0429624e18c8d7f1f8, type: 3}
-  - {fileID: 8300000, guid: 7852f5ad15bbd4444ba77cbc231fdf0b, type: 3}
-  TubeSkins:
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: 9b7c02e7248048746a0c3aa55bf0bde7, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: e977bd8157fa41b48ada6bf4f7148621, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
-  - {fileID: 21300000, guid: c1b5328d04a98394e9b276828f5a936f, type: 3}
+  - {fileID: 21300000, guid: ddb586d3b8f0a4a8591ae385dbf6b26c, type: 3}
+  - {fileID: 21300000, guid: bb723d29f296b42b3b18988ce0b059bc, type: 3}
+  - {fileID: 21300000, guid: 70f64238c73f549df97014c575c9b716, type: 3}
+  - {fileID: 21300000, guid: 5f7944e76e4134c9ca082d80532029e9, type: 3}
+  - {fileID: 21300000, guid: 542abd1424523408d91ae83ffb64cb2f, type: 3}
+  - {fileID: 21300000, guid: 0ecf2e3d1af7547ef962b27671cc3dec, type: 3}
+  - {fileID: 21300000, guid: 461f28f697baa4446b8c8a51e1a310ba, type: 3}
+  - {fileID: 21300000, guid: ed48aafa17db54e028c84abaa77eb37a, type: 3}
+  - {fileID: 21300000, guid: e45dbd3acdb65467eb62441009a21823, type: 3}
+  - {fileID: 21300000, guid: dea2d8f5e805e494b91eb52af49d7f0e, type: 3}
+  - {fileID: 21300000, guid: 774f2a52347324103b9ad5af792bee30, type: 3}
+  - {fileID: 21300000, guid: f825d95c5319941ea827773a379b0585, type: 3}
+  - {fileID: 21300000, guid: fae928953e83146d4bcefa220a3b183f, type: 3}
+  Prices: 00000000c8000000c8000000c8000000c80000005e0100005e0100005e0100005e01000090010000f401000090010000f4010000

@@ -13,20 +13,26 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   LanguageSprite:
-  - {fileID: 21300000, guid: 9e279748faa3eee4387d99fb9bc3910b, type: 3}
-  - {fileID: 21300000, guid: b481f5fdaee54504a84ecca1314ead32, type: 3}
+  - {fileID: 21300000, guid: 2497fd67ae48d4dda8f0d542fead219c, type: 3}
+  - {fileID: 21300000, guid: a764966c7f28045388588083866fa410, type: 3}
+  - {fileID: 21300000, guid: 0787c7d6ad7434002b67ea142e1fefe7, type: 3}
   PlayButtonText:
   - Play
   - "\u0418\u0433\u0440\u0430\u0442\u044C"
+  - "\u0413\u0440\u0430\u0442\u0438"
   ShopButtonText:
   - Shop
+  - "\u041C\u0430\u0433\u0430\u0437\u0438\u043D"
   - "\u041C\u0430\u0433\u0430\u0437\u0438\u043D"
   SelectText:
   - Select
   - "\u0412\u044B\u0431\u0440\u0430\u0442\u044C"
+  - "\u0412\u0438\u0431\u0440\u0430\u0442\u0438"
   SelectedText:
   - Selected
   - "\u0412\u044B\u0431\u0440\u0430\u043D\u043E"
+  - "\u0412\u0438\u0431\u0440\u0430\u043D\u043E"
   RestartText:
   - Restart
   - "\u0417\u0430\u043D\u043E\u0432\u043E"
+  - "\u041D\u0430\u043D\u043E\u0432\u043E"

@@ -56,4 +56,9 @@ public class PlayerScore : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
     }
+
+    public int GetScore()
+    {
+        return score;
+    }
 }

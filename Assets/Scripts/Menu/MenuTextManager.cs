@@ -40,6 +40,9 @@ public class MenuTextManager : MonoBehaviour
 			language = 1;
 		} else if (language == 1)
 		{
+			language = 2;
+		} else if (language == 2)
+		{
 			language = 0;
 		}
 		

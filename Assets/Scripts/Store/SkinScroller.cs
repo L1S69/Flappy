@@ -29,12 +29,7 @@ public class SkinScroller : MonoBehaviour
 		PlayerPrefs.SetInt("AvailableSkins" + 0, 1);
 		money = GetComponent<Money>();
 		SetSkin(skinsData.Skins[0]);
-		if (PlayerPrefs.GetInt("ChoosedSkin") == 0)
-		{
-			selectButtonText.text = selectedText;
-			selectButtonText.color = new Color(0, 255, 0);
-		}
-		else selectButtonText.color = new Color(0, 0, 0);
+		CheckPlayerChoise();
 	}
 	
 	private void OnEnable()
@@ -61,13 +56,8 @@ public class SkinScroller : MonoBehaviour
 		if (number < skinsData.Skins.Length - 1) number++;
 		else number = 0;
 		SetSkin(skinsData.Skins[number]);
-		if (PlayerPrefs.GetInt("AvailableSkins" + number) == 1) selectButtonText.text = selectText;
-		else selectButtonText.text = $"{skinsData.Prices[number]}";
-		if (PlayerPrefs.GetInt("ChoosedSkin") == number) 
-		{
-			selectButtonText.text = selectedText;
-			selectButtonText.color = new Color(0, 255, 0);
-		} else selectButtonText.color = new Color(0, 0, 0);
+		CheckAvailability();
+		CheckPlayerChoise();
 	}
 	
 	private void PreviousSkin()
@@ -75,14 +65,8 @@ public class SkinScroller : MonoBehaviour
 		if (number > 0) number--;
 		else number = skinsData.Skins.Length - 1;
 		SetSkin(skinsData.Skins[number]);
-		if (PlayerPrefs.GetInt("AvailableSkins" + number) == 1) selectButtonText.text = selectText;
-		else selectButtonText.text = $"{skinsData.Prices[number]}";
-		if (PlayerPrefs.GetInt("ChoosedSkin") == number)
-		{
-			selectButtonText.text = selectedText;
-			selectButtonText.color = new Color(0, 255, 0);
-		}
-		else selectButtonText.color = new Color(0, 0, 0);
+		CheckAvailability();
+		CheckPlayerChoise();
 	}
 	
 	private void SelectSkin()
@@ -91,7 +75,7 @@ public class SkinScroller : MonoBehaviour
 		{
 			PlayerPrefs.SetInt("ChoosedSkin", number);
 			selectButtonText.text = selectedText;
-			selectButtonText.color = new Color(0, 255, 0);
+			selectButtonText.color = new Color32(124, 78, 255, 255);
 		}
 		else if (money.SpendMoney(skinsData.Prices[number]))
 		{
@@ -101,6 +85,26 @@ public class SkinScroller : MonoBehaviour
 		else 
 		{
 			print("Not enough money");
+		}
+	}
+
+	private void CheckAvailability()
+	{
+		if (PlayerPrefs.GetInt("AvailableSkins" + number) == 1) selectButtonText.text = selectText;
+		else selectButtonText.text = $"{skinsData.Prices[number]}";
+	}
+
+	private void CheckPlayerChoise()
+	{
+		if (PlayerPrefs.GetInt("ChoosedSkin") == number)
+		{
+			selectButtonText.text = selectedText;
+			selectButtonText.color = new Color32(124, 78, 255, 255);
+		}
+		else 
+		{
+			selectButtonText.color = new Color32(227, 218, 255, 255);
+			selectButtonText.text = selectText;
 		}
 	}
 }
